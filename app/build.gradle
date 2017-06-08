@@ -24,9 +24,13 @@ android {
     //    Build Type  + Product Flavor = Build Variant（构建类型+定制产品=构建变种版本）
     productFlavors {
         flavor1 {
+            applicationIdSuffix ".flavor1"
+            versionNameSuffix "-flavor1"
         }
 
         flavor2 {
+            applicationIdSuffix ".flavor2"
+            versionNameSuffix "-flavor2"
         }
     }
     sourceSets {    //   sourceSets and Dependencies（源组件和依赖关系)
