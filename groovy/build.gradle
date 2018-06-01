@@ -9,3 +9,19 @@ havaFunTask.doLast{
 havaFunTask.doFirst{
 	println 'first excute havaFunTask'
 }
+
+class LhTask extends DefaultTask{
+	String msg = "This is LhTask"
+
+	// @TaskAction 表示该Task要执行的动作,即在调用该Task时，hello()方法将被执行
+	// 否则，task hello()和hello()不执行
+	@TaskAction
+	def hello(){
+		println "hello world, $msg"
+	}
+}
+
+task hello(type:LhTask)
+task hello1(type:LhTask){
+	msg = "I am an android developer"
+}
