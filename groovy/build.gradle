@@ -1,0 +1,11 @@
+task havaFunTask(){
+	println 'config hava fun'
+}
+
+havaFunTask.doLast{
+	println 'after excute havaFunTask'
+}
+
+havaFunTask.doFirst{
+	println 'first excute havaFunTask'
+}
