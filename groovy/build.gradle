@@ -25,3 +25,21 @@ task hello(type:LhTask)
 task hello1(type:LhTask){
 	msg = "I am an android developer"
 }
+
+// 无参数
+def closure1 ={
+	println  'hello closure1'
+}
+closure1() // 执行闭包closure1
+
+//Gradle在默认情况下已经为Project定义了很多Property，如下：
+ext.property1 = 'this is property1'
+ext {
+       property2 = "this is property2"
+}
+
+task closure2 {
+       println property1  //直接访问
+       println property2
+}
+
